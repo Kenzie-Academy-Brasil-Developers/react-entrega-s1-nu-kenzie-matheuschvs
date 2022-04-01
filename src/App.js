@@ -12,6 +12,7 @@ import { List } from './components/List'
 
 function App() {
   const [transactionsList, setTransactionsList] = useState([])
+  const [filteredList, setFilteredList] = useState(transactionsList)
 
   return (
     <>
@@ -23,13 +24,17 @@ function App() {
             setTransactionsList={setTransactionsList}
           />
           <TotalMoney
-            transactionsList={transactionsList}
+            transactionsList={filteredList}
           />
         </div>
         <div>
-          <ListFilter />
-          <List
+          <ListFilter
             transactionsList={transactionsList}
+            setFilteredList={setFilteredList}
+          />
+          <List
+            transactionsList={filteredList}
+            setTransactionsList={setTransactionsList}
           />
         </div>
       </main>

@@ -17,6 +17,9 @@ const Form = ({ transactionsList, setTransactionsList }) => {
     }
 
     setTransactionsList([...transactionsList, data])
+    setDescription('')
+    setAmount(1)
+    setType('Entrada')
   }
 
   return (

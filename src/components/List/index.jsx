@@ -2,11 +2,19 @@ import { Card } from '../Card'
 
 import './style.css'
 
-const List = ({ transactionsList }) => {
+const List = ({
+  transactionsList,
+  setTransactionsList
+}) => {
   return (
     <ul>
       {transactionsList.map((transaction, index) => (
-        <Card transaction={transaction} key={index} />
+        <Card
+          transaction={transaction}
+          transactionsList={transactionsList}
+          setTransactionsList={setTransactionsList}
+          key={index}
+        />
       ))}
     </ul>
   )

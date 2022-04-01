@@ -1,3 +1,48 @@
+.list-item {
+  padding: 1.125rem 0.75rem;
+  background: var(--grey-1);
+  border-radius: 0.25rem;
+  border-left: 0.25rem solid var(--grey-2);
+}
+
+.list-item--income {
+  border-left-color: var(--color-secondary);
+}
+
 .list-item + .list-item {
   margin-top: 2rem;
+}
+
+.top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-item__title {
+  flex: 1;
+  margin-bottom: 1rem;
+  font: 700 1rem 'Nunito', sans-serif;
+}
+
+.list-item__amount {
+  font: 400 0.75rem 'Nunito', sans-serif;
+}
+
+.list-item__remove {
+  margin-left: 3.375rem;
+  border: none;
+  border-radius: 2.46px;
+  width: 1.375rem;
+  height: 1.375rem;
+  transition: all 0.2s;
+}
+
+.list-item__remove:hover {
+  background: var(--grey-3);
+}
+
+.list-item__type {
+  font: 400 0.75rem 'Nunito', sans-serif;
+  color: var(--grey-3);
 }
