@@ -1,0 +1,27 @@
+.total {
+  padding: 1.125rem 1.5rem;
+
+  border: 1px solid var(--grey-2);
+  border-radius: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total__title {
+  margin-bottom: 0.5rem;
+  font: 700 1rem 'Nunito', sans-serif;
+  line-height: 1.875rem;
+  color: var(--grey-4);
+}
+
+.total__bottom {
+  font: 400 0.75rem 'Nunito', sans-serif;
+  color: var(--grey-3);
+}
+
+.total__value {
+  font: 700 1rem 'Nunito', sans-serif;
+  color: var(--color-primary);
+}

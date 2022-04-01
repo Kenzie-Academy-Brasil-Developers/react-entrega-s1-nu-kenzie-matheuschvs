@@ -1,0 +1,5 @@
+.home__main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem calc((100% - var(--inner-width)) / 2);
+}

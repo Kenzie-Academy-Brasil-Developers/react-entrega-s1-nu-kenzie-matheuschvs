@@ -1,0 +1,3 @@
+.list-item + .list-item {
+  margin-top: 2rem;
+}
