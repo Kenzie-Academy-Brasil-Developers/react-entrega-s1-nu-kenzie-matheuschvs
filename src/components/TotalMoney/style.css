@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+.total--hidden {
+  display: none;
+}
+
 .total__title {
   margin-bottom: 0.5rem;
   font: 700 1rem 'Nunito', sans-serif;

@@ -1,0 +1,23 @@
+.list-item--empty {
+  padding: 1.5625rem 0.6875rem;
+  background: var(--grey-1);
+  border-radius: 0.25rem;
+  border-left: 0.25rem solid var(--grey-2);
+}
+
+.list-item--empty + .list-item--empty {
+  margin-top: 2rem;
+}
+
+.top-rectangle {
+  width: 20.625rem;
+  height: 0.8125rem;
+  background: var(--grey-2);
+  margin-bottom: 0.8125rem;
+}
+
+.bottom-rectangle {
+  width: 4.75rem;
+  height: 0.8125rem;
+  background: var(--grey-2);
+}

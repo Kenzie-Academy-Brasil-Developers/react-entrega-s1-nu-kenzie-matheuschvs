@@ -6,7 +6,7 @@ const TotalMoney = ({ transactionsList }) => {
   )
 
   return (
-    <section className='total'>
+    <section className={`total ${transactionsList.length > 0 ? '' : 'total--hidden'}`}>
       <span>
         <h4 className='total__title'>Valor total:</h4>
         <p className='total__bottom'>O valor se refere as entradas</p>
