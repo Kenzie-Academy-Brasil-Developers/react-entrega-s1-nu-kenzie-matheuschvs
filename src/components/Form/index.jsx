@@ -68,8 +68,8 @@ const Form = ({
           className='form__type'
           id='type'
         >
-          <option value='Entrada'>entrada</option>
-          <option value='Despesa'>saída</option>
+          <option value='Entrada'>Entrada</option>
+          <option value='Despesa'>Despesa</option>
         </select>
       </span>
       <button className='form__submit' type='submit'>
