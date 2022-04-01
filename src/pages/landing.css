@@ -1,0 +1,72 @@
+.landing {
+  background: var(--grey-4);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing__left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-right: 3rem;
+
+  height: 20.25rem;
+}
+
+.landing__title {
+  font: 800 2.375rem 'Nunito', sans-serif;
+  line-height: 3rem;
+  color: #FFF;
+
+  width: 21.7rem;
+}
+
+.landing__description {
+  color: #FFF;
+  font: 400 1rem 'Nunito', sans-serif;
+}
+
+.landing__link {
+  background: var(--color-primary);
+  
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font: 500 1rem 'Inter', sans-serif;
+  line-height: 3rem;
+
+  border-radius: 0.5rem;
+
+  width: 15rem;
+  height: 3rem;
+
+  transition: all 0.2s;
+}
+
+.landing__link:hover {
+  background: var(--color-primary-2);
+  color: var(--grey-1);
+}
+
+@media only screen and (max-width: 1024px) {
+  .landing-hero {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .landing__title {
+    width: unset;
+  }
+
+  .landing__left-container {
+    margin-right: 0;
+    padding: 2rem;
+    height: 30rem;
+  }
+}

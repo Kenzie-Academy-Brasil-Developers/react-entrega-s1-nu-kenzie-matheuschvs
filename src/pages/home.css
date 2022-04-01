@@ -1,0 +1,23 @@
+.home__main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem calc((100% - var(--inner-width)) / 2);
+}
+
+@media only screen and (max-width: 1024px) {
+  .home__main {
+    padding: 2.5rem;
+    flex-direction: column;
+  }
+
+  .home__left-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .home__left-wrapper {
+    flex-direction: column;
+  }
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.svg'
 import './style.css'
 
@@ -10,7 +11,9 @@ const Header = () => {
           Nu Kenzie Logo
         </figcaption>
       </figure>
-      <button className='page-header__button'>Inicio</button>
+      <Link to='/' className='page-header__button'>
+        Inicio
+      </Link>
     </header>
   )
 }

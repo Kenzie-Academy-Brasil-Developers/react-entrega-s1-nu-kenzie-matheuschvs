@@ -39,3 +39,20 @@
 .filter__option + .filter__option {
   margin-left: 1rem;
 }
+
+@media only screen and (max-width: 1024px) {
+  .filter {
+    width: unset;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .filter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .filter__title {
+    margin-bottom: 1rem;
+  }
+}

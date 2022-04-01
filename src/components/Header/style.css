@@ -19,9 +19,16 @@
   color: var(--grey-3);
   font: 600 0.875rem 'Nunito', sans-serif;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .page-header__button:hover {
   background: var(--grey-3);
   color: var(--grey-1);
+}
+
+@media only screen and (max-width: 1024px) {
+  .page-header {
+    padding: 1.375rem 2.5rem;
+  }
 }

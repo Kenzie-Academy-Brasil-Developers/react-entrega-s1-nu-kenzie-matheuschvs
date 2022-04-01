@@ -29,3 +29,19 @@
   font: 700 1rem 'Nunito', sans-serif;
   color: var(--color-primary);
 }
+
+@media only screen and (max-width: 1024px) {
+  .total {
+    width: 22.75rem;
+    height: 20.75rem;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .total {
+    width: unset;
+    height: unset;
+
+    margin-bottom: 1rem;
+  }
+}
