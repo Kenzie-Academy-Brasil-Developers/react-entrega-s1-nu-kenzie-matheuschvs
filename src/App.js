@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './reset.css'
 import './global.css'
@@ -11,8 +11,34 @@ import { ListFilter } from './components/ListFilter'
 import { List } from './components/List'
 
 function App() {
+  const [filter, setFilter] = useState('all')
   const [transactionsList, setTransactionsList] = useState([])
-  const [filteredList, setFilteredList] = useState(transactionsList)
+  const [filteredList, setFilteredList] = useState([])
+
+  useEffect(() => {
+    handleFilter(filter)
+  }, [filter, transactionsList])
+
+  function handleFilter(option) {
+    if (option === 'all') {
+      setFilteredList(transactionsList)
+      setFilter('all')
+    } else if (option === 'incomes') {
+      const incomes = transactionsList.filter(
+        transaction => transaction.type === 'Entrada'
+      )
+
+      setFilteredList(incomes)
+      setFilter('incomes')
+    } else {
+      const outgoes = transactionsList.filter(
+        transaction => transaction.type === 'Despesa'
+      )
+
+      setFilteredList(outgoes)
+      setFilter('outgoes')
+    }
+  }
 
   return (
     <>
@@ -20,6 +46,8 @@ function App() {
       <main className='home__main'>
         <div>
           <Form
+            filter={filter}
+            handleFilter={handleFilter}
             transactionsList={transactionsList}
             setTransactionsList={setTransactionsList}
           />
@@ -29,11 +57,12 @@ function App() {
         </div>
         <div>
           <ListFilter
-            transactionsList={transactionsList}
-            setFilteredList={setFilteredList}
+            filter={filter}
+            handleFilter={handleFilter}
           />
           <List
-            transactionsList={filteredList}
+            filteredList={filteredList}
+            transactionsList={transactionsList}
             setTransactionsList={setTransactionsList}
           />
         </div>

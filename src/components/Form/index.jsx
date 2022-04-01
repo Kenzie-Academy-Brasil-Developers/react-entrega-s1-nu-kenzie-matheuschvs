@@ -2,7 +2,10 @@ import { useState } from 'react'
 
 import './style.css'
 
-const Form = ({ transactionsList, setTransactionsList }) => {
+const Form = ({
+  transactionsList,
+  setTransactionsList
+}) => {
   const [description, setDescription] = useState('')
   const [amount, setAmount] = useState(1)
   const [type, setType] = useState('Entrada')
