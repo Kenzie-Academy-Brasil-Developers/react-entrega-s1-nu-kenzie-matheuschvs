@@ -13,16 +13,18 @@ const Form = ({
   function handleSubmit(formEvent) {
     formEvent.preventDefault()
 
-    const data = {
-      description,
-      type,
-      value: amount
-    }
+    if (description) {
+      const data = {
+        description,
+        type,
+        value: amount
+      }
 
-    setTransactionsList([...transactionsList, data])
-    setDescription('')
-    setAmount(1)
-    setType('Entrada')
+      setTransactionsList([...transactionsList, data])
+      setDescription('')
+      setAmount(1)
+      setType('Entrada')
+    }
   }
 
   return (
