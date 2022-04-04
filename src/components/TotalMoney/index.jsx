@@ -1,8 +1,16 @@
+import { useEffect } from 'react'
 import './style.css'
 
 const TotalMoney = ({ transactionsList }) => {
+  useEffect(() => { console.log('tl: ', transactionsList) }, [transactionsList])
+
   const total = transactionsList.reduce(
-    (acc, transaction) => acc += +transaction.value, 0
+    (acc, transaction) => {
+      if (transaction.type === 'Entrada')
+        return acc += +transaction.value
+
+      return acc -= +transaction.value
+    }, 0
   )
 
   return (
